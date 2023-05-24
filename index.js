@@ -35,9 +35,9 @@ startBtn.addEventListener("click",()=>{
             hr = hr <10?"0"+hr:hr;
             min="0"+0;
         }
-        console.log(hr,min,sec,ms)
         inicoCron();
-    },10);  
+    },10); 
+    
 })
 stopBtn.addEventListener("click",()=>{
     startBtn.classList.remove("active")
@@ -52,5 +52,6 @@ resetBtn.addEventListener("click",()=>{
     resetBtn.classList.add("active")
     startBtn.disabled=false;
     hr=min=sec=ms= "0" + 0;
+    clearInterval(setTimer)
     inicoCron();
 })
